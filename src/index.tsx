@@ -1,6 +1,5 @@
-/* eslint-disable react/jsx-filename-extension */
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import './index.css';
 import { ChakraProvider } from '@chakra-ui/react';
 import App from './App';
