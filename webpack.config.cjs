@@ -1,17 +1,31 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable indent */
 const path = require('path');
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+    mode: 'development',
     entry: './src/index.tsx',
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
+                test: /\.(ts|tsx|js|jsx)$/,
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
             {
+                test: /\.(ts|tsx)$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env', '@babel/preset-react'],
+                    },
+                },
+            },
+            {
                 test: /\.css$/i,
-                use: ["style-loader", "css-loader"],
+                use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.svg?$/,
@@ -23,8 +37,16 @@ module.exports = {
                         },
                     },
                 ],
-            }
+            },
         ],
+    },
+    plugins: [
+        new HtmlWebPackPlugin({
+            template: "./public/index.html",
+        }),
+    ],
+    devServer: {
+        static: './dist',
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
