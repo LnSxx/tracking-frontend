@@ -25,7 +25,8 @@
     "webpack-cli": "^4.9.1"
   },
   "scripts": {
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "lint": "eslint src/**/*.ts src/**/*.tsx"
   },
   "eslintConfig": {
     "extends": [
