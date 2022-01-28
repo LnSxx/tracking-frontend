@@ -1238,7 +1238,7 @@
     "@chakra-ui/react-utils" "1.2.1"
     "@chakra-ui/utils" "1.9.1"
 
-"@chakra-ui/layout@1.7.0":
+"@chakra-ui/layout@^1.7.0", "@chakra-ui/layout@1.7.0":
   "integrity" "sha512-ZjRqLGs16T4PcWH445SkELVuxxfecjjUeprtFnNw13QzwydP46L8+GB3ycp6wyJDa6DMo77TxQQnK5jUUwY6Mw=="
   "resolved" "https://registry.npmjs.org/@chakra-ui/layout/-/layout-1.7.0.tgz"
   "version" "1.7.0"
